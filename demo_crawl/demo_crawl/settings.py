@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for demo_project2 project
+# Scrapy settings for demo_crawl project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'demo_project2'
+BOT_NAME = 'demo_crawl'
 
-SPIDER_MODULES = ['demo_project2.spiders']
-NEWSPIDER_MODULE = 'demo_project2.spiders'
+SPIDER_MODULES = ['demo_crawl.spiders']
+NEWSPIDER_MODULE = 'demo_crawl.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'demo_project2 (+http://www.yourdomain.com)'
+#USER_AGENT = 'demo_crawl (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'demo_project2.middlewares.DemoProject2SpiderMiddleware': 543,
+#    'demo_crawl.middlewares.DemoCrawlSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'demo_project2.middlewares.DemoProject2DownloaderMiddleware': 543,
+#    'demo_crawl.middlewares.DemoCrawlDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,10 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'demo_project2.pipelines.MongoDbPipeline': 300,
-
-}
+#ITEM_PIPELINES = {
+#    'demo_crawl.pipelines.DemoCrawlPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -89,7 +88,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-#FEED_URI = 'file://C:/Users/Tehmeer Ali Paryani/Desktop/Tensorflow/Basic Webscraping/feed.csv'
-
-MONGO_URI = 'mongodb://localhost:27017'
-MONGO_DB = 'goodreads'
